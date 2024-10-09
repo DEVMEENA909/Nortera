@@ -46,14 +46,14 @@ function navAnimation(){
         food.style.borderRadius = "30px"
         var tl = gsap.timeline()
         tl.to(".food",{
-            y:600,
+            y:() => window.innerHeight * 1,
             duration:.5,
         })
     })
     upper.addEventListener("mouseleave",function(){
         food.style.border = "0px"
         gsap.to(".food",{
-            y:-600,
+            y:() => window.innerHeight * -1,
             duration:1,
             ease: "expoScale(0.5,7,none)",
         })
@@ -66,14 +66,14 @@ function navAnimation(){
         food.style.borderRadius = "30px"
         var tl = gsap.timeline()
         tl.to(".info",{
-            y:600,
+            y:() => window.innerHeight * 1,
             duration:.5,
         })
     })
     up.addEventListener("mouseleave",function(){
         food.style.border = "0px"
         gsap.to(".info",{
-            y:-600,
+            y:() => window.innerHeight * -1,
             duration:1,
             ease: "expoScale(0.5,7,none)",
         })
@@ -86,27 +86,34 @@ var mouse1 = document.querySelector(".mouse1")
 var cont1 = document.querySelector(".cont-1")
 var cont2 = document.querySelector(".cont-2")
 
-cont1.addEventListener("mousemove",function(dets){
-    gsap.to(mouse,{
-        x:dets.x -320,
+cont1.addEventListener("mouseenter",function(){
+
+    cont1.addEventListener("mousemove",function(dets){
+        gsap.to(mouse,{
+            x:() => window.innerWidth * -.25 + dets.x,
+        })
     })
-})
-cont1.addEventListener("mouseleave",function(dets){
-    gsap.to(mouse,{
-        x:0,
-        y:0
+    cont1.addEventListener("mouseleave",function(dets){
+        gsap.to(mouse,{
+            x:0,
+            y:0
+        })
     })
 })
 
-cont2.addEventListener("mousemove",function(dets){
-    gsap.to(mouse1,{
-        x:dets.x -960,
-    })
-})
 
-cont2.addEventListener("mouseleave",function(dets){
-    gsap.to(mouse1,{
-        x:0,
-        y:0
+cont2.addEventListener("mouseenter",function(){
+    
+    cont2.addEventListener("mousemove",function(dets){
+        gsap.to(mouse1,{
+            x:() => window.innerWidth * -.75 + dets.x,
+        })
+    })
+    
+    cont2.addEventListener("mouseleave",function(dets){
+        gsap.to(mouse1,{
+            x:0,
+            y:0
+        })
     })
 })
