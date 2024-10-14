@@ -841,7 +841,7 @@ html , body{
     justify-content: left;
     gap: 5vw;
 }
-.page6 .links h2{
+.page6 .links span{
     font-family: font2;
     font-weight: 200;
     font-size: 1.3vw;
@@ -860,15 +860,11 @@ html , body{
     display: flex;
     flex-direction: column;
     gap: 1.8vw;
-    position: relative;
-    transition: all ease 1s;
 }
 .three{
     display: flex;
     flex-direction: column;
     gap: 1.8vw;
-    position: relative;
-    transition: all ease 1s;
 }
 .four{
     display: flex;
@@ -876,8 +872,18 @@ html , body{
     gap: .6vw;
     font-family: font3;
     font-size: .1vw;
+}
+.two span{
     position: relative;
-    transition: all ease 1s;
+    width: fit-content;
+}
+.three span{
+    width: fit-content;
+    position: relative;
+}
+.four span{
+    width: fit-content;
+    position: relative;
 }
 
 .page6 #second{
@@ -905,4 +911,19 @@ html , body{
 .hyperlinks .right h3{
     font-family: font3;
     font-weight: 500;
+}
+
+.links span::after{ 
+    content: "";
+    position: absolute;
+    top: 98%;
+    left: 0%;
+    z-index: 99;
+    background: white;
+    height: 1px;
+    width: 0%;
+}
+.links span:hover::after{
+    transition: all ease-in-out .3s;
+    width: 100% ;
 }
