@@ -44,12 +44,10 @@ html , body{
     background-color: transparent;
 }
 
-/* White background for the.nav  */
 .nav .scrolled-up {
     background-color: white;
 }
 
-/* Hidden.nav  when scrolling down */
 .nav .hidden {
     transform: translateY(-100%);
 }
@@ -852,7 +850,8 @@ html , body{
     gap:2vw;
     font-size: 1.8vw;
 }
-.one span{
+.one h3{
+    font-weight: 400;
     font-size: 1vw;
 }
 .two{
@@ -876,12 +875,15 @@ html , body{
 .two span{
     position: relative;
     width: fit-content;
+    cursor: pointer;
 }
 .three span{
+    cursor: pointer;
     width: fit-content;
     position: relative;
 }
 .four span{
+    cursor: pointer;
     width: fit-content;
     position: relative;
 }
@@ -926,4 +928,10 @@ html , body{
 .links span:hover::after{
     transition: all ease-in-out .3s;
     width: 100% ;
+}
+.left i:hover{
+    cursor: pointer;
+}
+.right h3:hover{
+    cursor: pointer;
 }

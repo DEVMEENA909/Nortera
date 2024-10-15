@@ -1,3 +1,4 @@
+
 function loco() {
     gsap.registerPlugin(ScrollTrigger);
 
@@ -28,27 +29,6 @@ function loco() {
 loco()
 
 function navAnimation(){
-    let lastScrollTop = 0;
-const navbar = document.querySelector('.nav');
-
-window.addEventListener('scroll', function () {
-        let scrollY = document.documentElement.scrollTop 
-
-    if (scrollY == 0 ) {
-        navbar.classList.add('transparent');
-        navbar.classList.remove('scrolled-up', 'hidden');
-    } else if ( scrollY>0 ) {
-        navbar.classList.add('hidden');
-        navbar.classList.remove('scrolled-up', 'transparent');
-    } else {
-        navbar.classList.add('scrolled-up');
-        navbar.classList.remove('hidden', 'transparent');
-    }
-
-    lastScrollTop = scrollY;
-    console.log(scrollY)
-});
-
    var playbtn = document.querySelector(" .user") 
    var pause = document.querySelector(".upper")
    playbtn.addEventListener("mousemove",function(){
@@ -139,4 +119,3 @@ cont2.addEventListener("mouseenter",function(){
     })
 })
 
-console.log(document.scrollY)
