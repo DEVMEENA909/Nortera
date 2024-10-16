@@ -24,6 +24,25 @@ function loco() {
     // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
     ScrollTrigger.refresh();
 
+    var nav = document.querySelector('.nav')
+    let lastScrollTop = 0;
+    locoScroll.on('scroll',(obj) =>{
+         let scrollY = obj.scroll.y
+         if(scrollY==0){
+            nav.style.backgroundColor = "transparent"
+            nav.style.transform = "translate(0%)"
+         }
+         else if(scrollY>lastScrollTop){
+            nav.style.transform = 'translateY(-110%)'
+         }
+         else if(scrollY<lastScrollTop){
+             nav.style.backgroundColor = "white"
+             nav.style.transform = "translateY(0%)"
+         }
+         console.log(scrollY)
+         lastScrollTop = scrollY;
+    })
+
 }
 
 loco()

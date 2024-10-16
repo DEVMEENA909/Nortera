@@ -31,14 +31,15 @@ html , body{
     padding-top: 10vh;
 }
 .nav{
-    height: 10vh;
-    padding-top: 2vw;
+    height: 14vh;
     width: 100%;
     display: flex;
     z-index: 9;
     align-items: center;
     position: fixed;
     justify-content: space-between;
+    transition: all ease-in-out .5s;
+    color: #476460;
 }
 .nav .transparent {
     background-color: transparent;
