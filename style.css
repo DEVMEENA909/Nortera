@@ -31,39 +31,31 @@ html , body{
     padding-top: 10vh;
 }
 .nav{
-    height: 14vh;
+    height: 12vh;
     width: 100%;
     display: flex;
     z-index: 9;
     align-items: center;
     position: fixed;
     justify-content: space-between;
-    transition: all ease-in-out .5s;
+    transition: all ease-in-out .3s;
     color: #476460;
-}
-.nav .transparent {
-    background-color: transparent;
-}
-
-.nav .scrolled-up {
-    background-color: white;
-}
-
-.nav .hidden {
-    transform: translateY(-100%);
 }
 .nav-center{
     margin-left: 9vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: font2;
     gap: 2vw;
     z-index: 9;
-    font-weight: 500;
     font-size: 1.1vw;
     width: 42vw;
     height: 2vw;
+}
+.nav-center p{
+    font-family: font2;
+    font-weight: 500;
+
 }
 .nav-center sup{
     padding-top:2vw;
@@ -79,10 +71,12 @@ html , body{
     align-items: center;
     justify-content: center;
     padding-right: 3vw;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     z-index: 9;
+}
+.nav-right p{
+    font-family: font2;
     font-weight: 500;
-    
 }
 .nav-right .elems{
     display: flex;
@@ -377,7 +371,7 @@ html , body{
     width: 50%;
     font-weight: 600;
     font-size: 2.2vw;
-    margin-top: 15vw;
+    margin-top: 17vw;
     font-family: font2;
     letter-spacing: .1vw;
 }
@@ -386,7 +380,7 @@ html , body{
     width: 41vw;
 }
 .img img{
-    height: 105%;
+    height: 110%;
     /* border-radius: 40%; */
     width: 110%;
     padding: 15px 30px;
@@ -397,16 +391,18 @@ html , body{
     padding: 15px 30px;
 }
 .low-1{
-    margin-top: 1.6vw;
-    line-height: .7;
-    display: inline-block;
+    line-height: 1;
+    height:fit-content;
+    display: flex;
 }
-.low-1 h1{
+.low-1 span{
+    height: auto;
     font-family: font1;
     width: 100%;
     font-size: 21.5vw;
     font-weight: 600;
     color:#1B3D38;
+    width:auto;
 }
 .page2{
     padding: 1vw 3vw;
@@ -427,27 +423,25 @@ html , body{
 .leftbox{
     height: 110vh;
     width: 45vw;
-    background-color: red;
     position: relative;
     background-image: url(./images/matar.avif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.upbox{
-    position: absolute;
-    height: 50%;
-    width: 70%;
-    left: 80%;
-    top: 50%;
-    background-color:#72BFDA;
-}
-
 
 .page3{
     height: 210vh;
     width: 100%;
     padding-top: 2vw;
+}
+.page3 h2{
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 5vw;
+    font-family: font2;
+    padding-left: 2vw;
+    color: #1B3D38;
 }
 .page3 h1{
     font-size: 5vw;
@@ -541,7 +535,7 @@ html , body{
 }
 .cont-1{
     width: 47%;
-    height: 75dvh;
+    height: 80dvh;
     font-size: 4dvw;
     position: relative;
     text-align: center;
@@ -561,14 +555,15 @@ html , body{
     color: #DBE7E8;
 }
 .cont-1 p{
+    font-family: font2;
     margin-top:3vh;
-    font-size: 1.7vw;
+    font-size: 1.4vw;
     font-weight: 500;
     color: #DBE7E8;
 }
 .cont-2{
     width: 47%;
-    height: 75dvh;
+    height: 80dvh;
     font-size: 4dvw;
     text-align: center;
     overflow: hidden;
@@ -584,15 +579,17 @@ html , body{
     border-radius: 100px;
 }
 .cont-2 h1{
+    font-family: font2;
     font-size: 3.5vw;
     line-height: 4vw;
-    font-weight: 500;
-    color: #1B3D38;
+    font-weight: 600;
+    color: white;
 }
 .cont-2 p{
-    font-size: 2vw;
+    font-family: font2;
+    font-size: 1.3vw;
     font-weight: 600;
-    color: #1B3D38;
+    color: white;
 }
 .mouse{
     height: 10dvw;
@@ -639,6 +636,11 @@ html , body{
     margin-right: 2vw;
     background:black;
 }
+.page4 .center p{
+    overflow: hidden;
+    font-family: font2;
+    font-weight: 500;
+}
 .page4 .left{
     margin-top: -10vw;
     font-size: 2vw;
@@ -654,13 +656,14 @@ html , body{
 .img-1 img{
     object-position: center;
     object-fit: cover;
-    height: 20vw;
-    width: 20vw;
+    height: 23vw;
+    width: 23vw;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
 .center :nth-child(1){
-    font-size: 2.3vw;
+    font-family: font2;
+    font-size: 2vw;
     font-weight: 500;
 }
 .low{
@@ -668,10 +671,11 @@ html , body{
     align-items: center;
     justify-content: center;
     gap: 1vw;
-    width: 22vw;
+    font-size: 1.3vw;
+    width: 26vw;
     height: 5vw;
-    margin-left: 2vw;
-    margin-top: 15vw;   
+    margin-left: -2vw;
+    margin-top: 21vw;   
 }
 .low:hover ::after{
     top: 0%;
@@ -709,7 +713,7 @@ html , body{
     width: 25vw;
     font-size: 4vw;
     font-weight: 600;
-    
+    font-family: font2;
 }
 .pck p{
     font-size: 1.2vw;
@@ -821,7 +825,13 @@ html , body{
     width: 100%;
     background: #1B3D38;
 }
-.page6 h1{
+.page6 .new{
+    display: flex;
+    overflow: hidden;
+}
+.page6 h5{
+    width: auto;
+    height: auto;
     margin-top: -4vw;
     font-size: 21vw;
     padding-left: 1.6vw;
